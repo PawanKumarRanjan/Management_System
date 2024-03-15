@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org" th:replace="~{adminBase::Layout(~{::section})}">
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body>
+
+	<section>
+		<div style="padding-top: 20px;">
+			<div class="row">
+				<div class="col-md-6 offset-md-3">
+					<div class="card">
+						<div class="card-header text-center fs-4">Admin Register Here</div>
+							
+							<th:block th:if="${session.msg}">
+								<p class="text-center text-success fs-4">[[${session.msg}]]</p>
+							</th:block>
+							<th:block th:text="${@userServiceImpl.removeSessionMessage()}"></th:block>						
+							
+							<div class="card-body">
+							<form action="/create-admin" method="post">
+								<div class="mb-3">
+									<label>Enter Name</label>
+									<input type="text" name="name" class="form-control" required>
+								</div>
+								<div class="mb-3">
+									<label>Select Gender</label>
+									<span style="margin: 0 10px;">&nbsp;</span>
+									<span style="margin: 0 10px;">&nbsp;</span>
+									<input type="radio" name="gender" value="male" required> Male
+									<span style="margin: 0 10px;">&nbsp;</span>
+									<input type="radio" name="gender" value="female">Female
+									<span style="margin: 0 10px;">&nbsp;</span>
+									<input type="radio" name="gender" value="other">Other
+								</div>
+								<div class="mb-3">
+									<label>Select Date of Birth</label>
+									<input type="date" name="dob" class="form-control" required>
+								</div>
+								<div class="mb-3">
+									<label>Enter Email Id</label>
+									<input type="email" name="email" class="form-control" required>
+								</div>
+								<div class="mb-3">
+									<label>Enter Mobile Number</label>
+									<input type="number" name="mobile" class="form-control" required>
+								</div>
+								<div class="mb-3">
+									<label>Enter City</label>
+									<input type="text" name="city" class="form-control" required>
+								</div>
+								<div class="mb-3">
+									<label>Create Password</label>
+									<input type="password" name="password" class="form-control" required>
+								</div>
+								<button class="btn btn-primary col-md-12">Register</button>
+							</form>
+							</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+</body>
+</html>

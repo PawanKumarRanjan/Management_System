@@ -1,0 +1,54 @@
+@charset "ISO-8859-1";
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+.container {
+    height: 100vh; /* Makes the container take up the full height of the viewport */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+h1 {
+    text-align: center;
+    color: #007bff; /* Blue color */
+    font-size: 36px; /* Increased font size */
+    font-family: "Arial Black", sans-serif; /* Different font style */
+    position: absolute; /* Set the position to absolute */
+    top: 20px; /* Position from the top of the page */
+    left: 50%; /* Position in the center horizontally */
+    transform: translateX(-50%); /* Center horizontally */
+    width: 100%; /* Make the heading span the full width */
+}
+
+h2 {
+    text-align: center;
+    margin-top: 40px; /* Adjusted margin-top to push it a little bit above */
+    margin-bottom: 20px; /* Added margin-bottom */
+    color: #555;
+    font-style: italic; /* Making the heading italic */
+}
+
+.button-container {
+    display: flex;
+    justify-content: center;
+}
+
+.button {
+    padding: 10px 20px;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin: 0 10px;
+}
+
+.button:hover {
+    background-color: #555;
+    color: #fff;
+}
